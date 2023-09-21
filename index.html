@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Mateusz 2P</title>
+<script language="JavaScript">
+document.write("Szkielet Zaliczeniowy JavaScriptm, wykonał: Mateusz Szczepaniak 2P".fontcolor("red").bold().fontsize(8)+"<br>");
+function WinOpen_z3()
+{
+window.open("obraz.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+}
+function WinOpen_z4()
+{
+window.open("z4_szc.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+}
+function WinOpen_z5()
+{
+window.open("zadanie5_szc.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=300,width=800,top=700,left=600");
+}
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="zadanie3" value="zadanie3-szczepaniak" onclick="WinOpen_z3(' ')">
+<input type="button" name="zadanie4" value="zadanie4-szczepaniak" onclick="WinOpen_z4(' ')">
+<input type="button" name="zadanie5" value="zadanie5-szczepaniak" onclick="WinOpen_z5(' ')">
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</form>
+</body>
+</html>

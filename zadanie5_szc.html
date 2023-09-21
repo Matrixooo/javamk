@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> Mateusz 2P</title>
+<style>
+.input{
+  text-align: center;
+}
+</style>
+<script language="JavaScript">
+document.write("wykonał: Mateusz Szczepaniak 2P mój numer w dzienniku 27, czyli mam układ [(27) mod 4=3] układ 3".fontcolor("red").bold().fontsize(8)+"<br>");
+function WinOpen_g1()
+{
+window.open("obraz1.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=500,left=200");
+}
+function WinOpen_g2()
+{
+window.open("obraz2.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=300,left=400");
+}
+function WinOpen_g3()
+{
+window.open("obraz3.html","okienko_z7","toolbar=no,directories=no,menubar=no,height=380,width=160,top=100,left=600");
+}
+function WinOpen_g4()
+{
+window.open("obraz4.html","okienko_z6","toolbar=no,directories=no,menubar=no,height=380,width=160,bottom=50,left=800");
+}
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<div style="text-align: center">
+<form>
+<input type="button" name="grafika1" value="grafika1" onclick="WinOpen_g1(' ')">
+<input type="button" name="grafika2" value="grafika2" onclick="WinOpen_g2(' ')">
+<input type="button" name="grafika3" value="grafika3" onclick="WinOpen_g3(' ')">
+<input type="button" name="grafika4" value="grafika4" onclick="WinOpen_g4(' ')">
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</form>
+</div>
+</body>
+</html> 
