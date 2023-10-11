@@ -3,6 +3,11 @@
 <head><meta charset="UTF-8"></head>
 <div style="color:navy;font-size:40px;">
 <script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ 
 var a_szc=prompt("podaj A=","");
 var b_szc=prompt("podaj B=","");
 var a=parseFloat(a_szc);
@@ -17,5 +22,6 @@ document.write("("+a+" + "+b+") ^ 3 = "+a+" ^ 3 + 3 * (("+a+") ^ 2)*("+b+") + 3 
 document.write("Odp("+a+"+"+b+")^3"+"="+suma);
 </script>
 </div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
 </body>
 </html>
