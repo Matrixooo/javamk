@@ -1,0 +1,22 @@
+<html>
+<body>
+<head>
+</head>
+<div style="color:navy;font-size:40px;">
+<script language="JavaScript">
+var a_szc=prompt("podaj A=","");
+var b_szc=prompt("podaj B=","");
+var a=parseFloat(a_szc);
+var b=parseFloat(b_szc);
+p=a*a*a;
+q=3*(a*(b*b));
+d=3*((a*a)*b);
+s=b*b*b;
+suma =p+d+q+s;
+document.write("wczytane liczby to A="+a+" B="+b+ "<br>");
+document.write("("+a+" + "+b+") ^ 3 = "+a+" ^ 3 + 3 * (("+a+") ^ 2)*("+b+") + 3 * ("+a+") * (("+b+")^"+b+") + "+b+" ^ 3 = "+p+" + "+d+" + "+q+" + "+s+" = "+suma+"<br>");
+document.write("Odp("+a+"+"+b+")^3"+"="+suma);
+</script>
+</div>
+</body>
+</html>

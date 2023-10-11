@@ -1,0 +1,31 @@
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+<div style="color: green; font-size: 56px;">
+<script language="JavaScript">
+var D1_szc=prompt("D1=","");
+var G1_szc=prompt("G1=","");
+var D2_szc=prompt("D2=","");
+var G2_szc=prompt("G2=","");
+var suma1;
+var suma2;
+
+var a=parseFloat(D1_szc);
+var b=parseFloat(D2_szc);
+var d=parseFloat(G1_szc);
+var c=parseFloat(G2_szc);
+suma1=(a-b)*86400;
+suma2=(d-c)*3600;
+suma3=suma2+suma1;
+document.write("Ilość sekund =  "+suma3+"<br>");
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+</script>
+</div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>
+
+
