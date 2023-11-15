@@ -1,15 +1,11 @@
 <html>
 <head>
-
-
 <script language="JavaScript">
 function drabina_szczepaniak(d,x)
 {
 d_szc=parseFloat(d)
 x_szc=parseFloat(x)
 d_wyn=Math.sqrt(x*x+d*d)
-
-
 document.getElementsByName('drabin')[0].value=d_wyn.toFixed(2);
 alert("drabina="+d_wyn.toFixed(2));
 pokaz.innerHTML="drabina="+d_wyn.toFixed(2)+"<br>";
@@ -23,8 +19,6 @@ x_szc=parseFloat(x)
 a_alfa = Math.atan(d_szc/x_szc)
 
 b_wynik = (a_alfa*180)/ Math.PI
-
-
 document.getElementsByName('alfaa')[0].value=b_wynik.toFixed(2);
 alert("alfa="+b_wynik.toFixed(2)+"");
 pokaz2.innerHTML="alfa="+b_wynik.toFixed(2)+"";
