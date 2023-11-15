@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+  <script language="JavaScript">
+function AB_szc(){
+var ax_szc= parseFloat(document.getElementById('ax').value);
+var bx_szc= parseFloat(document.getElementById('bx').value);
+var ay_szc= parseFloat(document.getElementById('ay').value);
+var by_szc= parseFloat(document.getElementById('by').value);
+var p1 = Math.pow(ax_szc-bx_szc,2);
+var p2 = Math.pow(ay_szc-by_szc,2);
+var h = p1+p2;
+var odc = Math.sqrt(h);
+document.getElementById("ABC").innerHTML ="AB= "+odc;
+}
+
+
+
+function BC_szc(){
+var bx_szc= parseFloat(document.getElementById('bx').value);
+var xc_szc= parseFloat(document.getElementById('xc').value);
+var by_szc= parseFloat(document.getElementById('by').value);
+var yc_szc= parseFloat(document.getElementById('yc').value);
+var p1 = Math.pow(bx_szc-xc_szc,2);
+var p2 = Math.pow(by_szc-yc_szc,2);
+var h = p1+p2;
+var odc = Math.sqrt(h);
+document.getElementById("ABC").innerHTML ="BC= "+odc;
+}
+
+
+
+function AC_szc(){
+var ax_szc= parseFloat(document.getElementById('ax').value);
+var xc_szc= parseFloat(document.getElementById('xc').value);
+var ay_szc= parseFloat(document.getElementById('ay').value);
+var yc_szc= parseFloat(document.getElementById('yc').value);
+var p1 = Math.pow(ax_szc-xc_szc,2);
+var p2 = Math.pow(ay_szc-yc_szc,2);
+var h = p1+p2;
+var odc = Math.sqrt(h);
+document.getElementById("ABC").innerHTML ="AC= "+odc;            
+}
+function okno_zamknij()
+{
+window.close()
+}
+ </script>
+
+
+
+
+Podaj Ax:<input type="text" id="ax" value=""><br><br>
+Podaj Ay:<input type="text" id="ay" value=""><br><br>
+Podaj Bx:<input type="text" id="bx" value=""><br><br>
+Podaj By:<input type="text" id="by" value=""><br><br>
+Podaj Cx:<input type="text" id="xc" value=""><br><br>
+Podaj Cy:<input type="text" id="yc" value=""><br><br>
+<input type="button" name="AB" value="AB" Onclick="AB_szc()"><br><br>
+<input type="button" name="AC" value="AC" Onclick="BC_szc()"><br><br>
+<input type="button" name="BC" value="BC" Onclick="AC_szc()"><br><br>
+<div style="color:red;font-size:44px;"id="ABC"></div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

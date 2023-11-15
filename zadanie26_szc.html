@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Pow_szczepaniak(a_szc, b_szc, c_szc)
+{
+var a_szc= parseFloat(document.getElementById('dlugosc').value);
+var b_szc= parseFloat(document.getElementById('dlugosc2').value);
+var c_szc= parseFloat(document.getElementById('wysokosc').value);
+
+var d_szc= (a_szc + b_szc)*c_szc/2;
+document.getElementById("nazwa").innerHTML ="pole trapezu= "+d_szc.toFixed(2)+" cm^2";
+}
+
+function Obw_szczepaniak(a_szc, b_szc, c_szc)
+{
+var a_szc= parseFloat(document.getElementById('dlugosc').value);
+var b_szc= parseFloat(document.getElementById('dlugosc2').value);
+
+var p_szc= (a_szc - b_szc)/2;
+var g_szc = a_szc*a_szc+b_szc*b_szc;
+var pit_szc = Math.sqrt(g_szc);
+var w_szc= a_szc + b_szc + pit_szc + pit_szc;
+
+
+
+document.getElementById("nazwa").innerHTML ="Obwód trapezu= "+w_szc.toFixed(2)+" cm";
+}
+
+
+
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+<h1>Obliczenie pola oraz obwodu trapez równoramiennego po podaniu górnej i dolnej podstawy oraz wysokości</h1><br><br>
+
+Podaj długość dłuzszej podstawy: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+Podaj długość  krótszej podstawy : <input type="text" id="dlugosc2" value="podaj długość"> cm<br><br><br>
+Podaj wyskosc  trapezu: <input type="text" id="wysokosc" value="podaj długość"> cm<br><br><br>
+
+
+
+<input type="button" name="Pow_szczepaniak" value="Oblicz pole" Onclick="Pow_szczepaniak()"><br><br>
+<input type="button" name="Obw_szczepaniak" value="Oblicz obwod" Onclick="Obw_szczepaniak()"><br><br>
+
+<div style="color:blue;font-size:50px;"id="nazwa"></div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+
+</body>
+</html>
+
+
+

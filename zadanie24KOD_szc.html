@@ -1,0 +1,58 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="100" rows="55">
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+html{
+background-color: silver;
+}
+html{
+color: navy;
+}
+</style>
+<script type="text/javascript">
+
+var x1_szc=parseFloat(prompt("1x=",""));
+var x2_szc=parseFloat(prompt("2x=",""));
+
+
+rad=    (x1_szc*Math.PI)/180;
+y1_szc= 3*Math.pow(x1_szc,6/8);
+y2_szc= 2*Math.cos(rad)+3*Math.sin(rad)
+y3_szc= Math.pow(Math.pow(x1_szc,5)+2*Math.pow(x2_szc,4),1/3)*Math.abs(x1_szc-x2_szc);
+
+
+document.write("1x="+x1_szc+"&nbsp&nbsp&nbsp&nbsp2x="+x2_szc+"<br>");
+document.write("1x="+x1_szc+"&nbsp&nbsp&nbsp&nbsp1x="+rad.toFixed(2)+"<br>");
+document.write("y1="+y1_szc.toFixed(2)+"<br>");
+document.write("y2="+y2_szc.toFixed(2)+"<br>");
+document.write("y3="+y3_szc.toFixed(2)+"<br>");
+
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
+
+
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>

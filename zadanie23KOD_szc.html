@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="100" rows="55">
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij()
+{
+window.close()
+}
+function drabina_szczepaniak(x_szcz,d_szcz)
+{
+var x_szcz=parseFloat(document.getElementById('dlugosc').value);
+var d_szcz=parseFloat(document.getElementById('dlugosc2').value);
+var drabina_szcz=Math.sqrt(x_szcz*x_szcz+d_szcz*d_szcz);
+document.getElementsByName('drabina')[0].value=drabina_szcz.toFixed(2);
+}
+function alfa_szczepaniak(x_szcz,d_szcz)
+{
+var x_szcz = parseFloat(document.getElementById('dlugosc').value);
+var d_szcz = parseFloat(document.getElementById('dlugosc2').value);
+var rad_szcz = Math.atan(x_szcz/d_szcz);
+var alfa_szcz=(rad_szcz*180)/Math.PI;
+document.getElementsByName('alfa')[0].value=alfa_szcz.toFixed(2);
+}
+</script>
+
+<h1>Obliczanie  odleglosci od drabiny i kata  alfa</h1>
+<form name="formularz" action="..." onsubmit="drabina_szczepaniak(this.dlugosc.value,this.dlugosc2.value); alfa_szczepaniak(this.dlugosc.value,this.dlugosc2.value);return false">
+
+Podaj d: <input name="dlugosc" size="6"> <br><br>
+Podaj x: <input name="dlugosc2" size="6"> <br><br>
+<br><br>
+<input type="submit" Value="oblicz"><br><br>
+Drabina:
+<input size="6" name="dlugosc">
+Alfa:
+<input size="6" name="alfa">
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</form>
+</body>
+</html>
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>

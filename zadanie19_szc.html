@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_szczepaniak()
+{
+var a_szc= parseFloat(document.getElementById('dlugosc').value);
+var b_szc= a_szc*a_szc;
+document.getElementById("nazwa").innerHTML ="pole kwadratu= "+b_szc.toFixed(2)+" cm^2";
+}
+function obwod_szczepaniak()
+{
+var a_szc= parseFloat(document.getElementById('dlugosc').value);
+var b_szc= 4*a_szc;
+document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_szc.toFixed(2)+" cm";
+}
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole_szczepaniak" value="Oblicz pole" Onclick="pole_szczepaniak()"><br><br>
+
+<input type="button" name="obwod_szczepaniak" value="Oblicz obwod" Onclick="obwod_szczepaniak()"><br><br>
+
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="50" rows="44">
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_szc(a, b) {
+return a + b;
+}
+function odejmowanie_szc(a, b) {
+return a - b;
+}
+function mnożenie_SZC(a, b) {
+return a * b;
+}
+function do_kwadratu_szc(a, b) {
+return "<br>"+a+ "^2= "+ a * a  +"<br>"+b+ "^2= "+ b*b;
+}
+function reszta_z_dzielenia_a_przez_b_szc(a, b) {
+return a % b;
+}
+
+
+document.write("suma="+suma_szc(a,b)+"<br>");
+document.write("odejmowanie="+odejmowanie_szc(a,b)+"<br>");
+document.write("mnożenie="+mnożenie_SZC(a,b)+"<br>");
+document.write("do kwadratu="+do_kwadratu_szc(a,b)+"<br>");
+document.write(" reszta z dzielenia a przez b="+reszta_z_dzielenia_a_przez_b_szc(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>
