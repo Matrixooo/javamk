@@ -1,44 +1,55 @@
 <html>
 <head>
-<meta charset="UTF-8">
-</head>
-<body>
-<script type="text/javascript">
-function okno_zamknij()
+
+
+<script language="JavaScript">
+function drabina_szczepaniak(d,x)
 {
-window.close()
+d_szc=parseFloat(d)
+x_szc=parseFloat(x)
+d_wyn=Math.sqrt(x*x+d*d)
+
+
+document.getElementsByName('drabin')[0].value=d_wyn.toFixed(2);
+alert("drabina="+d_wyn.toFixed(2));
+pokaz.innerHTML="drabina="+d_wyn.toFixed(2)+"<br>";
 }
-function drabina_szczepaniak(x_szcz,d_szcz)
+
+function alfa_szczepaniak(d,x)
 {
-var x_szcz=parseFloat(document.getElementById('dlugosc').value);
-var d_szcz=parseFloat(document.getElementById('dlugosc2').value);
-var drabina_szcz=Math.sqrt(x_szcz*x_szcz+d_szcz*d_szcz);
-document.getElementsByName('drabina')[0].value=drabina_szcz.toFixed(2);
-}
-function alfa_szczepaniak(x_szcz,d_szcz)
-{
-var x_szcz = parseFloat(document.getElementById('dlugosc').value);
-var d_szcz = parseFloat(document.getElementById('dlugosc2').value);
-var rad_szcz = Math.atan(x_szcz/d_szcz);
-var alfa_szcz=(rad_szcz*180)/Math.PI;
-document.getElementsByName('alfa')[0].value=alfa_szcz.toFixed(2);
+d_szc=parseFloat(d)
+x_szc=parseFloat(x)
+
+a_alfa = Math.atan(d_szc/x_szc)
+
+b_wynik = (a_alfa*180)/ Math.PI
+
+
+document.getElementsByName('alfaa')[0].value=b_wynik.toFixed(2);
+alert("alfa="+b_wynik.toFixed(2)+"");
+pokaz2.innerHTML="alfa="+b_wynik.toFixed(2)+"";
 }
 </script>
-
-<h1>Obliczanie  odleglosci od drabiny i kata  alfa</h1>
-<form name="formularz" action="..." onsubmit="drabina_szczepaniak(this.dlugosc.value,this.dlugosc2.value); alfa_szczepaniak(this.dlugosc.value,this.dlugosc2.value);return false">
-
-Podaj d: <input name="dlugosc" size="6"> <br><br>
-Podaj x: <input name="dlugosc2" size="6"> <br><br>
-<br><br>
-<input type="submit" Value="oblicz"><br><br>
-Drabina:
-<input size="6" name="dlugosc">
-Alfa:
-<input size="6" name="alfa"><br>
-<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
-</form>
-</body>
+  </head>
+ <body>
+<h1>Obliczanie odleglosci od drabiny i kata</h1><br><br>
+<form name="formularz" action="..." onsubmit="drabina_szczepaniak(this.d_szc.value,this.x_szc.value); alfa_szczepaniak(this.d_szc.value,this.x_szc.value);return false">
+    Podaj d:
+<input size="6" name="d_szc">
+    Podaj x:
+<input size="6" name="x_szc">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+    drabina:
+<input size="6" name="drabin">
+    alfa:
+<input size="6" name="alfaa">
+    </form>
+    <table>
+        <tr id="pokaz"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+ </body>
 </html>
-
 
