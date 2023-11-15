@@ -1,0 +1,61 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="100" rows="55">
+<html>
+<head>
+</head>
+<body>
+<script>
+function wysokosc_szczepaniak(a, b, c) {
+var odleglosc_szc = parseFloat(a);
+var kat_szc = parseFloat(b);
+var s_szc = parseFloat(c);
+
+var rad= (Math.PI/180) * kat_szc;
+var H_szc= odleglosc_szc * Math.tan(rad);
+
+var kat_startu_rad = Math.atan(H_szc / s_szc);
+var kat_startu = (180/Math.PI) * kat_startu_rad;
+
+document.getElementsByName('wysokosci')[0].value = "Wysokość: " + H_szc.toFixed(2);
+document.getElementsByName('katt')[0].value = "Kat startu: " + kat_startu.toFixed(2);
+}
+</script>
+	
+	
+	
+	
+<form name="formularz" onsubmit="wysokosc_szczepaniak(this.odleglosc.value, this.kat.value, this.droga.value); return false">
+Odległość między Arturem a Dawidem:
+<input name="odleglosc" name="Wprowadź odległość"><br>
+Kąt startu samolotu:
+<input name="kat" name="Wprowadź kąt"><br>
+Droga samolotu nad Dawidem:
+<input name="droga" name="Wprowadź drogę"><br>
+
+<input type="submit" value="oblicz"><br>
+
+Kat startu:
+<input name="katt" readonly>
+
+
+Wysokość:
+<input name="wysokosci" readonly><br>
+
+</form>
+
+</body>
+</html>
+
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>
