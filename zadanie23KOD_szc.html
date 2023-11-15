@@ -11,16 +11,12 @@ window.close()
 <TEXTAREA cols="100" rows="55">
 <html>
 <head>
-
-
 <script language="JavaScript">
 function drabina_szczepaniak(d,x)
 {
 d_szc=parseFloat(d)
 x_szc=parseFloat(x)
 d_wyn=Math.sqrt(x*x+d*d)
-
-
 document.getElementsByName('drabin')[0].value=d_wyn.toFixed(2);
 alert("drabina="+d_wyn.toFixed(2));
 pokaz.innerHTML="drabina="+d_wyn.toFixed(2)+"<br>";
@@ -48,15 +44,15 @@ pokaz2.innerHTML="alfa="+b_wynik.toFixed(2)+"";
 <br> <br>
 <input TYPE="submit" Value="oblicz" >
 <br> <br>
-    drabina:
+   drabina:
 <input size="6" name="drabin">
-    alfa:
+   alfa:
 <input size="6" name="alfaa">
-    </form>
-    <table>
+  </form>
+   <table>
 <tr id="pokaz"></tr>
  <tr id="pokaz2"></tr>
-    </table>
+   </table>
  </body>
 </html>
 </TEXTAREA>
