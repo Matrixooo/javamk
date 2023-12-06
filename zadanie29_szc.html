@@ -1,0 +1,146 @@
+<html>
+<head><meta charset="utf-8"></head>
+ <body>
+ 
+ <h1>1.W jaki sposób można określić właściwość danego obiektu</h1>
+<h3>Sposób 1</h3>
+Używając zapisu postaci:
+a)
+nazwa_obiektu.nazwa_właściwości="tekst"; dla właściwości typu tekstowego
+np.
+auto.marka="Opel Omega";
+b)
+nazwa_obiektu.nazwa_właściwości=liczba; dla właściwości typu liczbowego
+np.
+auto.rok=1996;
+auto.cena=25000;
+<h3>Sposób 2</h3>
+używając zapisu postaci:
+nazwa_obiektu[nazwa_właściwości];
+np. auto[cena]=25000;
+<h1>2. W jaki sposób można odwołać się do pól</h1>
+Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych
+i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami
+(np. zmienną, która przechowuje dany obiekt), i kropkę.
+np. console.log(samochod1.kolor);  wyświetla kolor obiektu samochod
+<h1>3. Wymień cechy charakterystyczne konstruktora</h1>
+<ul>
+<li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu,
+<li>nazywa się tak samo jak klasa,
+<li>nie zwraca żadnej wartości ,
+<li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora new.
+</ul>
+<h1>4.Konstruowanie obiektu na podstawie przykład</h1>
+<TEXTAREA cols="60" rows="15">
+
+var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+{
+Document.write(this.nazwisko + ‘ ‘ + this.imie)
+}
+}
+</TEXTAREA>
+<br>
+Uwaga1:
+Słowo kluczowe this  pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.<br>
+Uwaga2:
+Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.
+
+<h1>5.Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+Zamiast klas, JavaScript stosuje funkcje. Zdefiniowanie klasy ogranicza się do prostej czynności, jaką jest zdefiniowanie funkcji, która pełni funkcję klasy. <br>
+>Tak działa JS jest ponieważ JavaScript jest językiem opartym na prototypie, w którym nie występuje pojęcie klasy, w przeciwieństwie do języków takich, jak C++ czy Java. <br>
+Fakt ten bywa dezorientujący dla programistów przyzwyczajonych do języków z pojęciem klasy.
+
+<h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+
+Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów.<br> Użyte słowo kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.
+<br><TEXTAREA cols="60" rows="15">
+function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+wypisz = function ()
+{
+alert(this.nazwisko + ' ' + this.imie)
+}
+}
+</TEXTAREA>
+<br>
+
+<h1>7. Znaczenie słowa kluczowego New wraz z przykładem.</h1>
+Słowo kluczowe new
+Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.
+<br><TEXTAREA cols="60" rows="15">
+Przykład
+var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
+</TEXTAREA>
+Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.
+
+<h1>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem</h1>
+
+Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype.
+Przykład<br>
+<TEXTAREA cols="60" rows="15">
+function klient()
+{
+this.nazwisko='Bielski';
+this.imie='Paweł';
+}
+klient.prototype.pisz_dane = function ()
+{
+document.write(this.nazwisko + ' ' + this.imie)
+}
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+</TEXTAREA><br>
+Opis do przykładu powyżej:
+W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i metodę.
+Właściwość prototype może być również wykorzystana do dodawania dodatkowych metod lub właściwości do istniejących obiektów.<br>
+<TEXTAREA cols="60" rows="15">
+var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+{
+Document.write(this.nazwisko + ‘ ‘ + this.imie)
+}
+}
+czlowiek.wiek = 25;
+czlowiek wypisz_wiek = function() {alert(‘wiek: ‘ + this.wiek + ‘lat’)}
+czlowiek.wypisz();
+</TEXTAREA>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+ <br><br>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+ </body>
+</html>

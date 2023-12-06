@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="60" rows="35">
+
+<html>
+<head>
+<script type="text/javascript">
+function telefon_szczepaniak(model_s, pamiec_wbudowana_s, procesor_s,kolor_s) {
+
+this.model=model_s;
+this.pamiec_wbudowana=pamiec_wbudowana_s;
+this.procesor=procesor_s;
+this.kolor=kolor_s;
+}
+telefon_szczepaniak.prototype.wypisz = function () //definicja metody
+{
+alert(this.model + ' ' + this.pamiec_wbudowana+ ' pamięci ram ' + this.pamiec_wbudowana+ ' kolor ' + this.kolor);
+};
+var telefon1 = new telefon_szczepaniak("iPhone 14", "128GB", "Apple A15 Bionic", " czarny"); // nowy obiekt osoba1
+var telefon2 = new telefon_szczepaniak('iPhone 15', '256GB', 'Apple A16 Bionic', " czerwony");
+var telefon3 = new telefon_szczepaniak('iPhone 13', '128GB', 'Apple A15 Bionic', " bialy");
+telefon1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+telefon2.wypisz();
+telefon3.wypisz();
+document.write("dostęp do właściwości"+"<br><br><br>");
+// poniżej dostęp do pól osoby1
+
+
+document.write("pierwszy telefon"+"<br>"+telefon1.model+"<br> "+telefon1.procesor+"<br> "+telefon1.pamiec_wbudowana+"<br> "+telefon1.kolor+"<br><br>");
+document.write("drugi telefon"+"<br> "+telefon2.model+"<br> "+telefon2.procesor+"<br> "+telefon2.pamiec_wbudowana+"<br> "+telefon2.kolor+"<br><br>");
+document.write("trzeci telefon"+"<br> "+telefon3.model+"<br> "+telefon3.procesor+"<br>"+telefon3.pamiec_wbudowana+"<br> "+telefon3.kolor);
+</script>
+</head>
+
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>
