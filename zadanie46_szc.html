@@ -1,0 +1,23 @@
+<head>
+<title>Sprawdzenie danych Szczepaniak</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+do {
+var liczba1=prompt("wysokość=","");
+var h_szc=parseFloat(liczba1);
+}
+while ( h_szc<=0);
+do {
+var liczba1=prompt("podstawę=","");
+var a_szc=parseFloat(liczba1);
+}
+while(!( a_szc>0));
+var Pole=a_szc*h_szc/2;
+document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>");
+</script>
+</div>
+</body>
+</html>

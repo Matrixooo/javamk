@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<div style="color:black;font-size:42px;">
+<script type="text/javascript">
+wys=(11%4)+10;
+wiel=(11%3)+40;
+
+document.write("liczba wyświetleń: "+wys+"<br>");
+document.write("wielkosc liter:  "+wiel+"<br>");
+
+
+
+for( i=1; i<=wys ; i++){
+
+if(i%2==0)
+{
+document.write("Mateusz <br>");
+}
+else
+{
+document.write("Szczepaniak <br>");
+}
+}
+
+
+
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+
+
+
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+
+
+</body>
+</html>
