@@ -1,0 +1,148 @@
+
+
+<html>
+<head>
+</head>
+
+<script language="JavaScript">
+function okno_zamknij_szczepaniak()
+{
+window.close()
+}
+ </script>
+<body>
+<TEXTAREA cols="70" rows="150">
+<html>
+<head>
+</head>
+<script language="JavaScript">
+<html>
+<head>
+<script language="JavaScript">
+
+
+
+
+function del_szc(a,b,c)
+{
+a_szc=parseFloat(a)
+b_szc=parseFloat(b)
+c_szc=parseFloat(c)
+if(a==0){
+alert("To nie jest funkcja kwadratowa");
+pokazwiechloek_szc.innerHTML="";
+pokazkano_szc.innerHTML="";
+Miesjcazerowe2_szc.innerHTML="";
+Miesjcazerowe1_szc.innerHTML="";
+Funkcjailoczynowa_szc.innerHTML="";
+Funkvjalicoznyona2_szc.innerHTML="";
+Funkvjalmaleje_szc.innerHTML="";
+Funkvjalrosnie_szc.innerHTML="";
+}
+}
+
+
+
+function pp_szc(a,b,c)
+{
+a_szc=parseFloat(a)
+b_szc=parseFloat(b)
+c_szc=parseFloat(c)
+
+
+
+delta_szc = (b*b)-(4*a*c)
+q_szc = -delta_szc/(4*a)
+pier_delty = Math.sqrt(delta_szc);
+p_szc= -b/(2*a)
+pokazwiechloek_szc.innerHTML=("Wierzchołek=("+p_szc.toFixed(2)+";"+q_szc.toFixed(2)+")<br>");
+
+if(p_szc>0 && q_szc>0){
+pokazkano_szc.innerHTML=("Funkcja kanoniczna f(x)="+a_szc.toFixed(2)+"(x-"+p_szc.toFixed(2)+")^2+"+q_szc.toFixed(2)+"<br>");
+}else if(p_szc<0 && q_szc<0){
+pokazkano_szc.innerHTML=("Funkcja kanoniczna f(x)="+a_szc.toFixed(2)+"(x"+p_szc.toFixed(2)+")^2"+q_szc.toFixed(2)+"<br>");
+}else if(p_szc>0 && q_szc<0){
+pokazkano_szc.innerHTML=("Funkcja kanoniczna f(x)="+a_szc.toFixed(2)+"(x-"+p_szc.toFixed(2)+")^2"+q_szc.toFixed(2)+"<br>");
+}else if(p_szc<0 && q_szc>0){
+pokazkano_szc.innerHTML=("Funkcja kanoniczna f(x)="+a_szc.toFixed(2)+"(x"+p_szc.toFixed(2)+")^2+"+q_szc.toFixed(2)+"<br>");
+}
+
+if(delta_szc>0){
+  x1_szc = (-b - p_szc)/(2*a);
+  x2_szc = (-b + p_szc)/(2*a);
+  Miesjcazerowe2_szc.innerHTML=("Miejsca zerowe to x1= "+x1_szc.toFixed(2)+"  x2= "+x2_szc.toFixed(2)+"<br>");
+
+if(p_szc>0 && q_szc>0){
+Funkvjalicoznyona2_szc.innerHTML=("Funkcja iloczynowa to= f(x)= "+a_szc.toFixed(2)+"(x-"+x1_szc.toFixed(2)+")(x-"+x2_szc.toFixed(2)+")<br>");
+}else if(p_szc<0 && q_szc<0){ 
+Funkvjalicoznyona2_szc.innerHTML=("Funkcja iloczynowa to= f(x)= "+a_szc.toFixed(2)+"(x+"+x1_szc.toFixed(2)+")(x+"+x2_szc.toFixed(2)+")<br>");
+ }else if(p_szc>0 && q_szc<0){
+Funkvjalicoznyona2_szc.innerHTML=("Funkcja iloczynowa to= f(x)= "+a_szc.toFixed(2)+"(x-"+x1_szc.toFixed(2)+")(x+"+x2_szc.toFixed(2)+")<br>");	 
+}else if(p_szc<0 && q_szc>0){ 
+pokazkano_szc.innerHTML=("Funkcja kanoniczna f(x)="+a_szc.toFixed(2)+"(x+"+p_szc.toFixed(2)+")^2-"+q_szc.toFixed(2)+"<br>");
+}
+		 
+}else if(delta_szc==0){
+ x0_szc = -b/(2*a);
+   Miesjcazerowe1_szc.innerHTML=("Miejsce zerowe to x0= "+x0_szc.toFixed(2)+"<br>");
+  
+  if(x0_szc>0){
+  Funkcjailoczynowa_szc.innerHTML=("Funkcja iloczynowa to= f(x)= "+a_szc.toFixed(2)+"(x-"+x0_szc.toFixed(2)+")^2<br>");
+  }else  if(x0_szc<0){
+  Funkcjailoczynowa_szc.innerHTML=("Funkcja iloczynowa to= f(x)= "+a_szc.toFixed(2)+"(x"+x0_szc.toFixed(2)+")^2<br>");
+  }
+  
+  }else{
+   Miesjcazerowe1_szc.innerHTML=("Brak miejsc zerowych");
+}
+if(a>0){
+Funkvjalmaleje_szc.innerHTML=("Funkcja maleje w  przedziale [-∞;"+p_szc.toFixed(2)+"] ,a rośnie w ["+p_szc.toFixed(2)+";∞]");
+}else if(a<0){
+Funkvjalrosnie_szc.innerHTML=("Funkcja rośnie w  przedziale [-∞;"+p_szc.toFixed(2)+"] ,a maleje w ["+p_szc.toFixed(2)+";∞]");
+}
+
+
+
+}
+
+</script>
+  </head>
+ <body>
+<h1>Zadanie na ocene</h1><br><br>
+<form name="formularz" action="..." onsubmit="pp_szc(this.a_szc.value,this.b_szc.value,this.c_szc.value); del_szc(this.a_szc.value,this.b_szc.value,this.c_szc.value); return false">
+  
+    Podaj a:
+<input size="6" name="a_szc">
+    Podaj b:
+<input size="6" name="b_szc">
+    Podaj c:
+<input size="6" name="c_szc">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+    </form>
+
+    <table style="color:green;font-size:20mm">
+        <tr id="pokazwiechloek_szc"></tr>
+        <tr id="pokazkano_szc"></tr>
+	    <tr id="Miesjcazerowe2_szc"></tr>
+	    <tr id="Miesjcazerowe1_szc"></tr>
+		<tr id="Funkcjailoczynowa_szc"></tr>
+		<tr id="Funkvjalicoznyona2_szc"></tr>
+		<tr id="Funkvjalmaleje_szc"></tr>
+		<tr id="Funkvjalrosnie_szc"></tr>
+    </table>
+	 <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+</TEXTAREA>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_szczepaniak()"/>
+</body>
+</html>
